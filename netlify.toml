@@ -1,0 +1,8 @@
+[[redirects]]
+from = "/old-page"
+to = "/new-page"
+status = 301
+
+[[rewrites]]
+from = "/api/*"
+to = "/api/:splat"

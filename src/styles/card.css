@@ -1,0 +1,39 @@
+#card-div{
+    display: grid;
+  /* width: 90%;
+    margin: auto; */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 3%;
+    grid-row-gap:5%;
+    margin-top: 3%;
+    /* border: 1px solid red; */
+    margin-bottom: 5%;
+}
+.box{
+    background-color: #ddefe0;
+    /* width: 200px; */
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+}
+.box:nth-child(2){
+    background-color: #f4ecdd ;
+}
+.box:nth-child(3){
+    background-color: #efdada ;
+}
+.box:nth-child(4){
+    background-color: #dee0ef ;
+}
+
+.card-icon{
+    position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+}
+@media all and (max-width: 450px) {
+    #card-div{
+    margin-top: 20px;    
+    }
+}

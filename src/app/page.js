@@ -1,14 +1,17 @@
 "use client";
 import { useSession } from "next-auth/react";
 import "../styles/home.css";
-import Form from "@/components/form/page";
-import { redirect } from "next/navigation";
-import { useEffect } from "react";
+import Form from "@/app/components/page";
+import { useEffect, useState } from "react";
+import Dashboard from "./dashboard/Dashboard";
 import { useRef } from 'react';
 import Image from "next/image";
 import BottomArrow from "./../../public/BottomArrow.png"
 
+
 export default function Home() {
+  // const router = useRouter();
+  const [isLogin,setIsLogin] = useState(false);
   const session = useSession();
 
   const scrollRef = useRef(null);
@@ -22,11 +25,18 @@ export default function Home() {
 
   useEffect(()=>{
     if(session.status=="authenticated"){
-        redirect("/dashboard");
+        setIsLogin(true);
+        // redirect("/dashboard");
+       
+        // router.push('/dashboard');
+    }else{
+      setIsLogin(false);
     }
   },[session.status])
 
-  return (
+  
+    {
+     return isLogin ? < Dashboard />: 
     <div id="container">
       <div id="left">
         <h1>Board.</h1>
@@ -43,5 +53,7 @@ export default function Home() {
         <Form/>
       </div>
     </div>
-  );
+}
+  
+
 }

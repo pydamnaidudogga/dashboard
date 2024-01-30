@@ -1,11 +1,10 @@
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import bell from "./../../../public/bell.png"
 import user from "./../../../public/user.png";
 import logout from "./../../../public/logout.png"
 import "../../styles/navbar.css"
-import { signOut, useSession } from 'next-auth/react';
-import {ToastContainer ,toast} from 'react-toastify';
+import {ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {

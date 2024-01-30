@@ -1,5 +1,4 @@
 "use client";
-import { useSession } from "next-auth/react";
 import "../styles/home.css";
 import Form from "@/components/form/page";
 import { redirect } from "next/navigation";

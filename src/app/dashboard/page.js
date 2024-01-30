@@ -1,14 +1,11 @@
 'use client'
-import { useSession } from 'next-auth/react';
-import { redirect } from "next/navigation";
-import { useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import "../../styles/dashboard.css";
 import Card from '../components/Card';
 import BottomCards from '../components/BottomCards';
 import BarChart from '../components/Chart';
-import {toast} from 'react-toastify';
+
 
 
 const Dashboard = () => {

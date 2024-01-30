@@ -32,26 +32,26 @@ const Dashboard = () => {
     })
 
 
-    useEffect(()=>{
-      const fetchData = async ()=>{
-      try {
-        // Simulating an asynchronous API call
-        const response = await fetch('https://mushidipalli-back-end.onrender.com/users/all_users', {
-          method: 'GET'
-        });
+    // useEffect(()=>{
+    //   const fetchData = async ()=>{
+    //   try {
+    //     // Simulating an asynchronous API call
+    //     const response = await fetch('https://mushidipalli-back-end.onrender.com/users/all_users', {
+    //       method: 'GET'
+    //     });
 
-        await response.json();
+    //     await response.json();
 
-      } catch (error) {
-        console.error(error);     
+    //   } catch (error) {
+    //     console.error(error);     
        
-      }
-    }
+    //   }
+    // }
 
-    fetchData();
+    // fetchData();
 
 
-    })
+    // })
     
     
   return (

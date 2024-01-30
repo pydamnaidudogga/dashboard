@@ -9,22 +9,22 @@ import {ToastContainer ,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
-  const session=useSession();
+  // const session=useSession();
   const [userImage,setUserImage]=useState("")
 
-  const handleLogout=()=>{
+  // const handleLogout=()=>{
    
-    signOut("google");
-    toast.success('Log-out Successful', {
-      position: toast.POSITION.TOP_RIGHT
-    })
-  }
+  //   signOut("google");
+  //   toast.success('Log-out Successful', {
+  //     position: toast.POSITION.TOP_RIGHT
+  //   })
+  // }
 
-  useEffect(()=>{
-    if(session.status=="authenticated"){
-      setUserImage(session.data.user.image)
-    }
-  },[session.status])
+  // useEffect(()=>{
+  //   if(session.status=="authenticated"){
+  //     setUserImage(session.data.user.image)
+  //   }
+  // },[session.status])
 
   return (
     <div id="nav-container">
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div id="nav-right">
             <input type="text" placeholder="Search" id="search" />
             <Image src={bell} id="navIcon" width={18} height={20} alt='Alert'/>
-            <Image src={logout} id="navIcon" width={22} height={22} alt='Logout' onClick={()=>handleLogout()} />
+            <Image src={logout} id="navIcon" width={22} height={22} alt='Logout'  />
             <div id="user">
             <Image src={userImage?userImage:user} width={30} height={30} id="userImage" alt='user' />
             </div>

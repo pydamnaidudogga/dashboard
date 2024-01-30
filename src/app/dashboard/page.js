@@ -12,24 +12,24 @@ import {toast} from 'react-toastify';
 
 
 const Dashboard = () => {
-    const session=useSession();
+    // const session=useSession();
     
 
-    useEffect(()=>{
-      if(session.status=="unauthenticated"){
-          redirect("/");
-      }
-    },[session.status])
+    // useEffect(()=>{
+    //   if(session.status=="unauthenticated"){
+    //       redirect("/");
+    //   }
+    // },[session.status])
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
-      if(session.status==="authenticated"){
-        toast('Sign-in Successful', {
-          position: toast.POSITION.TOP_RIGHT
-        })
-      }
+    //   if(session.status==="authenticated"){
+    //     toast('Sign-in Successful', {
+    //       position: toast.POSITION.TOP_RIGHT
+    //     })
+    //   }
 
-    })
+    // })
 
 
     // useEffect(()=>{

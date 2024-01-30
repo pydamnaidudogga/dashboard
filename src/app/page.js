@@ -9,7 +9,7 @@ import Image from "next/image";
 import BottomArrow from "./../../public/BottomArrow.png"
 
 export default function Home() {
-  const session = useSession();
+  // const session = useSession();
 
   const scrollRef = useRef(null);
 
@@ -21,10 +21,11 @@ export default function Home() {
   };
 
   useEffect(()=>{
-    if(session.status=="authenticated"){
-        redirect("/dashboard");
-    }
-  },[session.status])
+    // if(session.status=="authenticated"){
+    //     redirect("/dashboard");
+    // }
+    redirect("/dashboard");
+  },[])
 
   return (
     <div id="container">
